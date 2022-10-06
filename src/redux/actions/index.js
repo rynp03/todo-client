@@ -1,7 +1,14 @@
 import axios from "axios";
-import { ADDNEW_TODO, GETALL_TODO, TOGGLE_TODO, UPDATE_TODO, DELETE_TODO, TOGGLE_TAB } from "./type";
+import {
+  ADDNEW_TODO,
+  GETALL_TODO,
+  TOGGLE_TODO,
+  UPDATE_TODO,
+  DELETE_TODO,
+  TOGGLE_TAB,
+} from "./type";
 
-const API_URL = "http://localhost:8000";
+const API_URL = "https://todo-server-rho.vercel.app";
 
 export const addNewTodo = (data) => async (dispatch) => {
   try {
@@ -49,5 +56,5 @@ export const deleteTodo = (id) => async (dispatch) => {
 };
 
 export const toggleTab = (tab) => (dispatch) => {
-  dispatch({type: TOGGLE_TAB, selected: tab})
-} 
+  dispatch({ type: TOGGLE_TAB, selected: tab });
+};
